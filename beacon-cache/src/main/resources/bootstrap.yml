@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: beacon-cache
+  profiles:
+    active: dev
+  cloud:
+    # 注册中心地址
+    nacos:
+      discovery:
+        server-addr: 172.29.205.122:8848
+      config:
+        server-addr: 172.29.205.122:8848
+        file-extension: yml
+      # beacon-cache-dev.yml
