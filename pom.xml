@@ -18,6 +18,10 @@
         <module>beacon-api</module>
         <module>beacon-common</module>
         <module>beacon-cache</module>
+        <module>beacon-strategy</module>
+        <module>beacon-test</module>
+        <module>beacon-push</module>
+        <module>beacon-search</module>
     </modules>
 
     <properties>

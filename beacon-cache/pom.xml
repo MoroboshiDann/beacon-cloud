@@ -11,7 +11,15 @@
 
   <name>beacon-cache</name>
   <url>http://maven.apache.org</url>
-
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-redis</artifactId>
+      <version>2.5.6</version>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
