@@ -1,4 +1,4 @@
-package org.moroboshidan.vo;
+package org.moroboshidan.api.vo;
 
 import lombok.Data;
 

@@ -1,5 +1,6 @@
-package org.moroboshidan.filter;
+package org.moroboshidan.api.filter;
 
+import org.moroboshidan.api.filter.CheckFilter;
 import org.moroboshidan.common.model.StandardSubmit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

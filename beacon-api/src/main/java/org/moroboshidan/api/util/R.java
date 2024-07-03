@@ -1,7 +1,7 @@
-package org.moroboshidan.util;
+package org.moroboshidan.api.util;
 
 import org.moroboshidan.common.exception.ApiException;
-import org.moroboshidan.vo.ResultVO;
+import org.moroboshidan.api.vo.ResultVO;
 
 public class R {
     public static ResultVO success(){

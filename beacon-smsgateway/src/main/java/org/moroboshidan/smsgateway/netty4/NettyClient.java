@@ -58,7 +58,7 @@ public class NettyClient {
             return false;
         }
         if (!channel.isOpen() || !channel.isActive() || !channel.isWritable()) {
-            //channel没开 或 没激活
+            // channel没开 或 没激活
             return false;
         }
         return true;
@@ -98,39 +98,40 @@ public class NettyClient {
 
     /**
      * 建立连接
+     *
      * @param host
      * @param port
      * @throws InterruptedException
      */
     public void doConnect(final String host, final int port) throws InterruptedException {
 
-        //创建线程组 - 手动设置线程数,默认为cpu核心数2倍
+        // 创建线程组 - 手动设置线程数,默认为cpu核心数2倍
         EventLoopGroup eventLoopGroup = new NioEventLoopGroup(4);
-        //创建引导程序
+        // 创建引导程序
         Bootstrap bootstrap = new Bootstrap();
-        //保持长连接
+        // 保持长连接
         bootstrap.option(ChannelOption.SO_KEEPALIVE, true);
-        //将线程加入bootstrap
+        // 将线程加入bootstrap
         bootstrap.group(eventLoopGroup)
                 .remoteAddress(host, port)
-                //使用指定通道类
+                // 使用指定通道类
                 .channel(NioSocketChannel.class)
-                //设置日志
+                // 设置日志
                 .handler(new LoggingHandler(LogLevel.INFO))
-                //重写通道初始化方法
+                // 重写通道初始化方法
                 .handler(new NettyClientInitializer(this));
 
         ChannelFuture channelFuture = bootstrap.connect().sync();
 
         channel = channelFuture.channel();
 
-        //账号登陆
+        // 账号登陆
         CmppMessageHeader cmppConnect = new CmppConnect(serviceId, pwd);
         channel.writeAndFlush(cmppConnect);
 
         channelFuture.addListener(ChannelFutureListener.CLOSE_ON_FAILURE);
 
-        //关闭前阻塞
+        // 关闭前阻塞
 //        channelFuture.channel().closeFuture().sync();
     }
 }

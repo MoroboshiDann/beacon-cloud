@@ -1,4 +1,4 @@
-package org.moroboshidan.filter;
+package org.moroboshidan.api.filter;
 
 import org.moroboshidan.common.model.StandardSubmit;
 

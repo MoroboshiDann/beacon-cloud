@@ -1,4 +1,4 @@
-package org.moroboshidan.form;
+package org.moroboshidan.api.form;
 
 import org.hibernate.validator.constraints.Range;
 

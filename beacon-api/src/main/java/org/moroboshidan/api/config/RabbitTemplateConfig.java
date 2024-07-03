@@ -1,4 +1,4 @@
-package org.moroboshidan.config;
+package org.moroboshidan.api.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;

@@ -46,9 +46,9 @@ public class CMPPHandler extends SimpleChannelInboundHandler {
                 log.info("----状态：" + resp.getStat());
                 // 提前获取一手~~~
                 ThreadPoolExecutor cmppDeliverPool = (ThreadPoolExecutor) SpringUtil.getBeanByName("cmppDeliverPool");
-                cmppDeliverPool.execute(new DeliverRunnable(resp.getMsg_Id_DELIVRD(),resp.getStat()));
+                cmppDeliverPool.execute(new DeliverRunnable(resp.getMsg_Id_DELIVRD(), resp.getStat()));
             } else {
-                //用户回复会打印在这里
+                // 用户回复会打印在这里
                 log.info("" + MsgUtil.bytesToLong(resp.getMsg_Id()));
                 log.info(resp.getSrc_terminal_Id());
                 log.info(resp.getMsg_Content());

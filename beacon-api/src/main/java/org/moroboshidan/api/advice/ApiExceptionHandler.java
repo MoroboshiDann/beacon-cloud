@@ -1,8 +1,8 @@
-package org.moroboshidan.advice;
+package org.moroboshidan.api.advice;
 
 import org.moroboshidan.common.exception.ApiException;
-import org.moroboshidan.util.R;
-import org.moroboshidan.vo.ResultVO;
+import org.moroboshidan.api.util.R;
+import org.moroboshidan.api.vo.ResultVO;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

@@ -1,4 +1,4 @@
-package org.moroboshidan.util;
+package org.moroboshidan.api.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -7,15 +7,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class NettyStartCMPP {
 
-    //ip
+    // ip
     public static String host = "127.0.0.1";
-    //端口
+    // 端口
     public static int port = 7890;
-    //账号
+    // 账号
     public static String serviceId = "laozheng";
-    //密码
+    // 密码
     public static String pwd = "JavaLaoZheng123!";
-
 
 
     @Bean(initMethod = "start")

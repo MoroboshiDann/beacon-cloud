@@ -1,4 +1,4 @@
-package org.moroboshidan.config;
+package org.moroboshidan.api.config;
 
 import org.moroboshidan.common.constant.RabbitMQConstant;
 import org.springframework.amqp.core.QueueBuilder;

@@ -1,4 +1,4 @@
-package org.moroboshidan.enums;
+package org.moroboshidan.api.enums;
 
 import lombok.Getter;
 

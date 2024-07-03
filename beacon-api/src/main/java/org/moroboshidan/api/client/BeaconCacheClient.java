@@ -1,4 +1,4 @@
-package org.moroboshidan.client;
+package org.moroboshidan.api.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
